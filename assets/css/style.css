@@ -30,7 +30,7 @@ body{
 /* --------------------------- NAVIGATION MENU ---------------------------- */
 
 .zaglavlje{
-    background-color:rgba(20,20,20,0.85);
+    
     position:fixed;
     width:100%;
     z-index: 3;
@@ -43,6 +43,11 @@ body{
      text-transform: uppercase;
      font-size:20px;
 }
+
+.navbar{
+    background-color:rgba(20,20,20,0.85);
+}
+
 
 .nav-link:hover{
     color:var(--boja-bela);
@@ -112,13 +117,14 @@ body{
 .about-content{
     display:flex;
     justify-content: space-between;
+    align-items: center;
     gap:50px;
 }
 
 .about-text{
     display:flex;
     flex-direction: column;
-  
+    
 }
 
 .about-text h2{
@@ -342,7 +348,7 @@ i {
 
 
 #contact{
-    padding:35px 0px;
+    padding:55px 0px;
     scroll-margin-top: 20vh;
     color:var(--boja-bela);
 }
