@@ -1,0 +1,410 @@
+:root{
+    --boja-bela: #ffffff;
+    --boja-zlatna: #D9A441;
+    --boja-tamnoSiva: #2a2a2a;
+    --boja-crna: #141414;
+    --shadow: 0px 18px 40px rgba(24, 54, 66, 0.12);
+    --radius: 8px;
+}
+
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+     background:url("../../img/background.gif") no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.sadrzaj{
+    width:100%;
+}
+
+/* --------------------------- NAVIGATION MENU ---------------------------- */
+
+.zaglavlje{
+    background-color:rgba(20,20,20,0.85);
+    position:fixed;
+    width:100%;
+    z-index: 3;
+    height:60px;
+}
+
+.nav-link{
+     color:var(--boja-zlatna);
+     font-weight:700;
+     text-transform: uppercase;
+     font-size:20px;
+}
+
+.nav-link:hover{
+    color:var(--boja-bela);
+}
+
+.nav-link:focus{
+    color: var(--boja-bela)
+}
+
+
+.navbar-brand img{
+    height:30px;
+}
+.navbar-toggler{
+    background-color:#D9A441;
+}
+
+
+/* --------------------------- HERO BANNER ---------------------------- */
+
+#hero{
+    width:100%;
+    padding-top:60px;
+   
+    min-height:60vh;
+}
+
+.hero-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height:60vh;
+}
+
+.hero-content h1{
+    font-size:5rem;
+    color:var(--boja-bela);
+
+}
+
+.hero-content p{
+    margin-top:25px;
+    font-size:1.5rem;
+    color:var(--boja-bela);
+
+}
+
+.hero-image{
+    padding:30px;
+}
+
+
+.hero-image img{
+    width:100%;
+}
+
+
+
+/* --------------------------- ABOUT SECTION ---------------------------- */
+
+#about{
+    padding:35px 0px;
+    scroll-margin-top: 20vh;
+    background-color: var(--boja-bela);
+}
+
+.about-content{
+    display:flex;
+    justify-content: space-between;
+    gap:50px;
+}
+
+.about-text{
+    display:flex;
+    flex-direction: column;
+  
+}
+
+.about-text h2{
+    margin:25px 0px;
+    font-size: 3rem;
+}
+
+
+
+.about-image img{
+    width:100%;
+    border-radius:var(--radius);
+    border:3px solid #D9A441;
+}
+
+
+
+/* --------------------------- EDUCATION SECTION ---------------------------- */
+
+#education{
+   
+    padding:35px 0px;
+    scroll-margin-top: 20vh;
+}
+
+.education-content h2{
+    font-size: 2.5rem;
+    color:var(--boja-zlatna);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.education-cards{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height:300px;
+    gap:50px;
+    padding:30px 0px;
+    
+    
+}
+
+.edu-card{
+    padding:50px;
+    color:var(--boja-bela);
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border: 2px solid #D9A441;
+    border-radius: var(--radius);
+    text-align: center;
+    background-color:var(--boja-tamnoSiva);
+   
+
+}
+
+.edu-card h3{
+    font-size:1.5rem;
+    color: var(--boja-zlatna);
+    text-align: center;
+    
+}
+
+.edu-card h4{
+    line-height:0.9;
+    font-size:0.9rem;
+    margin-bottom:30px;
+    color: var(--boja-zlatna);
+}
+
+
+/* --------------------------- SKILLS SECTION ---------------------------- */
+
+#skills{
+    padding: 35px 0px;
+    scroll-margin-top: 20vh;
+}
+
+.skills-content h2{
+    font-size: 3rem;
+    color:var(--boja-zlatna);
+    text-transform: uppercase;
+    margin-bottom:35px;
+    text-align: center;
+}
+
+.skill-card{
+    padding:25px 0px;
+   
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card p{
+    text-align: center;
+    margin-top:20px;
+    font-size:1.2rem;
+    font-weight:700;
+    color:var(--boja-bela);
+}
+
+i {
+    font-size:10rem;
+    color:var(--boja-zlatna);
+}
+
+.progress-bar{
+    background-color:var(--boja-zlatna);
+}
+
+
+
+/* --------------------------- PROJECTS SECTION ---------------------------- */
+
+#projects{
+
+    padding:35px 0px;
+    scroll-margin-top: 20vh;
+}
+
+.projects-content h2{
+    font-size: 3rem;
+    color:var(--boja-zlatna);
+    text-transform: uppercase;
+    margin-bottom:35px;
+    text-align: center;
+}
+
+.project-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:1fr 1fr;
+    grid-template-areas:
+        "novi novi stari stari"
+        "novi novi stari stari";
+    gap:40px;
+}
+
+.current-card{
+    background-color:var(--boja-tamnoSiva);
+    grid-area:novi;
+    overflow:hidden;
+    padding:25px;
+    border: 1px solid #D9A441;
+    border-radius:var(--radius);
+    display:flex;
+    gap:10px;
+    flex-direction: column;
+    position:relative;
+}
+
+.project-card{
+    background-color:var(--boja-tamnoSiva);
+    padding:20px;
+    border: 1px solid #D9A441;
+    border-radius:var(--radius);
+    display:flex;
+    gap:6px;
+    flex-direction: column;
+
+}
+
+
+.current-card h4{
+    font-size:2rem;
+    color:var(--boja-zlatna);
+    margin-top:10px;
+    font-weight:700;
+ 
+}
+
+.current-card h5{
+    color:var(--boja-zlatna);
+    margin-bottom: 15px;
+}
+
+.project-card h4{
+    color:var(--boja-zlatna);
+    margin-top:8px;
+    margin-bottom:0px;
+}
+
+.project-card h5{
+    color:var(--boja-zlatna);
+    margin-top:0px;
+    margin-bottom: 8px;
+    font-size:0.9rem;
+}
+
+.current-card img,
+.project-card img{
+    width:100%;
+    border-radius:var(--radius);
+}
+
+.current-card p{
+    font-size:0.9rem;
+    margin-bottom:25px;
+    color:var(--boja-bela);
+}
+
+.project-card-description{
+    font-size:0.9rem;
+    margin-bottom:40px;
+    color:var(--boja-bela);
+    
+}
+
+.project-btn{
+    margin-top:auto;
+    width:50%;
+
+}
+
+
+/* --------------------------- CONTACT SECTION ---------------------------- */
+
+
+#contact{
+    padding:35px 0px;
+    scroll-margin-top: 20vh;
+    color:var(--boja-bela);
+}
+
+
+.contact-content{
+    display:flex;
+    justify-content: space-between;
+
+    gap:50px;
+}
+
+
+
+.contact-text h2{
+    font-size:3rem;
+}
+
+.contact-text p{
+    font-size:1.1rem;
+    margin:25px 0px;
+}
+
+.contact-linkovi ul{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+
+.contact-icon{
+    display:inline-block;
+    margin-bottom:15px;
+}
+
+.contact-linkovi img{
+    width:35px;
+}
+
+.btn{
+    background-color:var(--boja-zlatna);
+}
+
+.btn:focus{
+    background-color:var(--boja-zlatna);
+}
+
+/* --------------------------- FOOTER ---------------------------- */
+
+.footer{
+    background-color:#2a2a2a;
+    border-top:1px solid #D9A441;
+}
+
+.footer-content{
+    display:flex;
+    align-items: center;
+    min-height:100px;
+    justify-content: space-between;
+}
+
+.footer-info{
+    color:#ffffff;
+    font-size:1.1rem;
+    display:block;
+}
