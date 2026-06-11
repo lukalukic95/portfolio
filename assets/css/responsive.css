@@ -1,66 +1,20 @@
-@media screen and (max-width:1200px){
-    .project-cards{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    grid-template-rows:1fr auto auto;
-    grid-template-areas:
-        "novi novi"
-        "stari stari"
-        "stari stari";
-    gap:20px;
-    }
-}
-
-
-
 
 @media screen and (max-width:992px){
-  .education-cards{
+
+    .education-cards{
     display:grid;
     grid-template-columns: 1fr;
     gap:30px;
     padding:30px 0px;
+  
     }
-
-    .project-cards{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    grid-template-rows:auto auto auto auto;
-    grid-template-areas:
-        "novi stari"
-        "novi stari"
-        "novi stari"
-        "novi stari";
-    gap:20px;
-    }
-
-    .project-card img{
-        display:none;
-    }
-
 
     .project-card{
     padding:15px;
-    border: 1px solid #D9A441;
-    border-radius:var(--radius);
-    }
-}
-
-
-@media screen and (max-width:767px){
-    .hero-message{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     }
 
-   
-    
-}
 
-@media screen and (max-width:576px){
-    
-    .project-cards{
+     .project-cards{
     display:grid;
     grid-template-columns:1fr;
     grid-template-rows:auto;
@@ -72,17 +26,98 @@
         "stari";
     gap:20px;
     }
+    
+    .current-card,
+    .project-card{
+        flex-direction: row;
+        gap:20px;
+    }
+
+    .current-card img,
+    .project-card img{
+    width:65%;
+
+    }
+
+    .project-card-text-block{
+        width:35%;
+    }
+
+    .current-short,
+    .current-short-button{
+    display:inline-block;
+    }
+
+    .current-long{
+    display:none;
+    }
+
+    .project-card-description,
+    .current-short{
+        font-size:0.8rem;
+    }
+
+    
+
+    .current-card h4{
+        margin-top:8px;
+        margin-bottom:5px;
+        font-size:1.5rem;
+    }
+
+    .current-card h5{
+        color:var(--boja-zlatna);
+    margin-top:0px;
+    margin-bottom: 8px;
+    font-size:0.9rem;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .hero-message{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
 
     .current-card,
     .project-card{
-      border-style:hidden hidden solid hidden;
-      border-radius:0px;
+        flex-direction: column;
+        gap:20px;
+    }
+
+    .current-card img,
+    .project-card img,
+     .project-card-text-block{
+    width:100%;
+
+    }
+
+    .project-card-description{
+        min-height:100px;
+    }
+
+    .project-btn{
+        width:20%;
+    }
+    
+}
+
+@media screen and (max-width:576px){
+    
+    
+
+    .current-card,
+    .project-card{
       padding-bottom:30px;;
+       border-bottom:2px solid #D9A441;
     }
 
      .project-card img{
         display:block;
     }
+
 
     
 }
@@ -103,6 +138,9 @@
         font-size:2rem;
     }
 
+    .edu-card{
+        border-bottom:1px solid #D9A441;
+    }
     
   
 }

@@ -3,10 +3,10 @@
     --boja-zlatna: #D9A441;
     --boja-tamnoSiva: #2a2a2a;
     --boja-crna: #141414;
+    --boja-svetloSiva: #EEEEEE;
     --shadow: 0px 18px 40px rgba(24, 54, 66, 0.12);
     --radius: 8px;
 }
-
 
 *{
     margin:0px;
@@ -77,20 +77,19 @@ body{
 #hero{
     width:100%;
     padding-top:60px;
-   
-    min-height:60vh;
 }
 
 .hero-content{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    min-height:60vh;
+    min-height:50vh;
 }
 
 .hero-content h1{
     font-size:5rem;
     color:var(--boja-bela);
+    margin-top:-90px;
 
 }
 
@@ -101,23 +100,16 @@ body{
 
 }
 
-.hero-image{
-    padding:30px;
-}
 
-
-.hero-image img{
-    width:100%;
-}
 
 
 
 /* --------------------------- ABOUT SECTION ---------------------------- */
 
 #about{
-    padding:35px 0px;
+    padding:55px 0px;
     scroll-margin-top: 20vh;
-    background-color: var(--boja-bela);
+    background-color: var(--boja-svetloSiva);
 }
 
 .about-content{
@@ -135,7 +127,9 @@ body{
 
 .about-text h2{
     margin:25px 0px;
-    font-size: 3rem;
+    font-size: 2.2rem;
+    font-weight:550;
+    color: var(--boja-zlatna);
 }
 
 
@@ -143,7 +137,7 @@ body{
 .about-image img{
     width:100%;
     border-radius:var(--radius);
-    border:3px solid #D9A441;
+    
 }
 
 
@@ -151,16 +145,17 @@ body{
 /* --------------------------- EDUCATION SECTION ---------------------------- */
 
 #education{
-   
-    padding:35px 0px;
+    padding:55px 0px;
     scroll-margin-top: 20vh;
+    background-color:var(--boja-bela);
+    
 }
 
 .education-content h2{
-    font-size: 2.5rem;
-    color:var(--boja-zlatna);
-    text-transform: uppercase;
-    text-align: center;
+    font-size: 2.2rem;
+    font-weight:550;
+    color: var(--boja-zlatna);
+
 }
 
 
@@ -176,31 +171,24 @@ body{
 
 .edu-card{
     padding:50px;
-    color:var(--boja-bela);
     display:flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    border: 2px solid #D9A441;
     border-radius: var(--radius);
-    text-align: center;
-    background-color:var(--boja-tamnoSiva);
-   
-
+    text-align:center;
+    background-color:var(--boja-svetloSiva);
 }
 
 .edu-card h3{
     font-size:1.5rem;
-    color: var(--boja-zlatna);
     text-align: center;
-    
 }
 
 .edu-card h4{
     line-height:0.9;
     font-size:0.9rem;
     margin-bottom:30px;
-    color: var(--boja-zlatna);
 }
 
 
@@ -209,19 +197,18 @@ body{
 #skills{
     padding: 35px 0px;
     scroll-margin-top: 20vh;
+    background-color:var(--boja-bela);
 }
 
 .skills-content h2{
-    font-size: 3rem;
+    font-size: 2.2rem;
     color:var(--boja-zlatna);
-    text-transform: uppercase;
     margin-bottom:35px;
-    text-align: center;
+
 }
 
 .skill-card{
     padding:25px 0px;
-   
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -233,16 +220,22 @@ body{
     margin-top:20px;
     font-size:1.2rem;
     font-weight:700;
-    color:var(--boja-bela);
+    color:var(--boja-tamnoSiva);
+
 }
 
 i {
-    font-size:10rem;
-    color:var(--boja-zlatna);
+    font-size:5rem;
+    color:var(--boja-tamnoSiva);
+    
 }
 
 .progress-bar{
     background-color:var(--boja-zlatna);
+}
+
+.progress{
+    --bs-progress-bg:var(--boja-tamnoSiva);
 }
 
 
@@ -250,17 +243,15 @@ i {
 /* --------------------------- PROJECTS SECTION ---------------------------- */
 
 #projects{
-
-    padding:35px 0px;
+    padding:55px 0px;
     scroll-margin-top: 20vh;
+    background-color: var(--boja-svetloSiva);
 }
 
 .projects-content h2{
-    font-size: 3rem;
+    font-size: 2.2rem;
     color:var(--boja-zlatna);
-    text-transform: uppercase;
     margin-bottom:35px;
-    text-align: center;
 }
 
 .project-cards{
@@ -274,11 +265,9 @@ i {
 }
 
 .current-card{
-    background-color:var(--boja-tamnoSiva);
+    background-color:var(--boja-bela);
     grid-area:novi;
-    overflow:hidden;
     padding:25px;
-    border: 1px solid #D9A441;
     border-radius:var(--radius);
     display:flex;
     gap:10px;
@@ -287,13 +276,12 @@ i {
 }
 
 .project-card{
-    background-color:var(--boja-tamnoSiva);
-    padding:20px;
-    border: 1px solid #D9A441;
+    background-color:var(--boja-bela);
     border-radius:var(--radius);
     display:flex;
     gap:6px;
     flex-direction: column;
+    padding:10px;
 
 }
 
@@ -314,7 +302,8 @@ i {
 .project-card h4{
     color:var(--boja-zlatna);
     margin-top:8px;
-    margin-bottom:0px;
+    margin-bottom:5px;
+    font-weight:700;
 }
 
 .project-card h5{
@@ -324,22 +313,30 @@ i {
     font-size:0.9rem;
 }
 
+
+
 .current-card img,
 .project-card img{
     width:100%;
     border-radius:var(--radius);
+    border:1px solid #EEEEEE;
+    
 }
 
-.current-card p{
-    font-size:0.9rem;
-    margin-bottom:25px;
-    color:var(--boja-bela);
+
+.current-short,
+.current-short-button{
+    display:none;
+}
+
+.project-card-text-block{
+    position:relative;
 }
 
 .project-card-description{
     font-size:0.9rem;
     margin-bottom:40px;
-    color:var(--boja-bela);
+    min-height:150px;
     
 }
 
@@ -356,21 +353,21 @@ i {
 #contact{
     padding:55px 0px;
     scroll-margin-top: 20vh;
-    color:var(--boja-bela);
+    background-color:var(--boja-bela);
 }
 
 
 .contact-content{
     display:flex;
     justify-content: space-between;
-
     gap:50px;
 }
 
 
 
 .contact-text h2{
-    font-size:3rem;
+    font-size:2.2rem;
+    color:var(--boja-zlatna)
 }
 
 .contact-text p{
