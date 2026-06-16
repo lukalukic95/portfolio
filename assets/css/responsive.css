@@ -1,146 +1,182 @@
 
-@media screen and (max-width:992px){
+@media screen and (min-width:426px){
 
-    .education-cards{
-    display:grid;
-    grid-template-columns: 1fr;
-    gap:30px;
-    padding:30px 0px;
-  
-    }
-
-    .project-card{
-    padding:15px;
-    }
-
-
-     .project-cards{
-    display:grid;
-    grid-template-columns:1fr;
-    grid-template-rows:auto;
-    grid-template-areas:
-        "novi"
-        "stari"
-        "stari"
-        "stari"
-        "stari";
-    gap:20px;
-    }
-    
-    .current-card,
-    .project-card{
-        flex-direction: row;
-        gap:20px;
-    }
-
-    .current-card img,
-    .project-card img{
-    width:65%;
-
-    }
-
-    .project-card-text-block{
-        width:35%;
-    }
-
-    .current-short,
-    .current-short-button{
-    display:inline-block;
-    }
-
-    .current-long{
-    display:none;
-    }
-
-    .project-card-description,
-    .current-short{
-        font-size:0.8rem;
-    }
-
+.project-card-description{
+    font-size:1.2rem;
+}
     
 
-    .current-card h4{
-        margin-top:8px;
-        margin-bottom:5px;
-        font-size:1.5rem;
-    }
+.project-btn{
+    margin-top:auto;
+    width:30%;
 
-    .current-card h5{
-        color:var(--boja-zlatna);
-    margin-top:0px;
-    margin-bottom: 8px;
-    font-size:0.9rem;
-    }
 }
 
+}
 
-@media screen and (max-width:768px){
-    .hero-message{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    }
-
-    .current-card,
-    .project-card{
-        flex-direction: column;
-        gap:20px;
-    }
-
-    .current-card img,
-    .project-card img,
-     .project-card-text-block{
-    width:100%;
-
-    }
-
-    .project-card-description{
-        min-height:100px;
+@media screen and (min-width:769px){
+    .project-cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+    grid-template-areas:
+        "project project"
+        "project project"
+        "project project";
+    gap:15px;
     }
 
     .project-btn{
-        width:20%;
-    }
-    
-}
-
-@media screen and (max-width:576px){
-    
-    
-
-    .current-card,
-    .project-card{
-      padding-bottom:30px;;
-       border-bottom:2px solid #D9A441;
+        width:33%;
     }
 
-     .project-card img{
-        display:block;
+    .project-card-text-block>h4{
+        font-size:1.4rem;
     }
-
-
-    
-}
-
-
-
-@media screen and (max-width:425px){
-    
-    .hero-content h1{
-        font-size:3rem;
-    }
-
-    .hero-content p{
+    .project-card-text-block>h5{
         font-size:1.2rem;
     }
 
-    .about-text h2{
-        font-size:2rem;
+    .project-card-text-block>p{
+        font-size:1rem;
     }
 
-    .edu-card{
-        border-bottom:1px solid #D9A441;
-    }
-    
-  
 }
+
+
+@media screen and (min-width:993px){
+
+body{
+    background-size:cover;
+}
+
+.modal-content{
+    height:60vh;
+}
+
+ .project-btn{
+        width:40%;
+    }
+
+.hero-content h1{
+    font-size:5rem;
+}
+
+.hero-content p{
+    font-size:2rem;
+}
+
+
+.education-cards{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:1fr;
+    gap:30px;
+    padding:25px 0px;
+}
+
+.edu-card{
+    position:relative;
+    border:none;
+}
+
+.edu-card-description{
+    font-size:1rem;
+}
+
+
+.edu-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:35%;
+    height:35%;
+    border-top:1px solid #D9A441;
+    border-left:1px solid #D9A441;
+    border-top-left-radius:20px;
+     opacity:0.5;
+}
+.edu-card::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:35%;
+    height:35%;
+    border-bottom:1px solid #D9A441;
+    border-right:1px solid #D9A441;
+    border-bottom-right-radius:20px;
+    opacity:0.5;
+}
+
+.edu-card h3{
+    font-size:1.3rem;
+    padding:25px 25px 0px 25px;
+
+}
+
+.edu-card h4{
+    margin-bottom:30px;
+
+}
+
+
+.project-cards{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    grid-template-rows:auto;
+    grid-template-areas:
+        "projectLatest projectLatest projectLatest projectLatest projectLatest projectLatest"
+        "project2 project2 project3 project3 project4 project4"
+        "projectWide2 projectWide2 projectWide2 projectWide3 projectWide3 projectWide3";
+    gap:15px;
+    }
+
+.project-card-text-block{
+    height:100%;
+    justify-content: center;
+
+}  
+
+.project-card:first-child{
+    grid-area: projectLatest;
+    flex-direction: row;
+    gap:25px;
+}
+
+.project-card:first-child>div{
+    width:50%;
+}
+
+.project-card:nth-child(2){
+    grid-area:project2;
+}
+.project-card:nth-child(3){
+    grid-area:project3;
+}
+.project-card:nth-child(4){
+    grid-area:project4;
+}
+.project-card:nth-child(5){
+    grid-area:projectWide2;
+}
+.project-card:last-child{
+    grid-area:projectWide3;
+}
+
+
+.project-card-text-block>h4{
+        font-size:1.9rem;
+    }
+    .project-card-text-block>h5{
+        font-size:1.2rem;
+    }
+
+    .project-card-text-block>p{
+        font-size:1rem;
+    }
+
+
+}
+

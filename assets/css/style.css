@@ -1,9 +1,9 @@
 :root{
-    --boja-bela: #ffffff;
+    --boja-bela: #EEEEEE;
     --boja-zlatna: #D9A441;
     --boja-tamnoSiva: #2a2a2a;
     --boja-crna: #141414;
-    --boja-svetloSiva: #EEEEEE;
+    --boja-svetloSiva: #DDDDDD;
     --shadow: 0px 18px 40px rgba(24, 54, 66, 0.12);
     --radius: 8px;
 }
@@ -11,6 +11,7 @@
 *{
     margin:0px;
     padding:0px;
+    font-family:Helvetica;
 }
 
 a{
@@ -23,22 +24,28 @@ html {
 
 body{
     background:url("../../img/background.gif") no-repeat;
-    background-size:cover;
     background-attachment: fixed;
+    
 }
 
 .sadrzaj{
     width:100%;
 }
 
+.btn{
+    background-color:var(--boja-zlatna);
+}
+
+.btn:focus{
+    background-color:var(--boja-zlatna);
+}
+
 /* --------------------------- NAVIGATION MENU ---------------------------- */
 
 .zaglavlje{
-    
     position:fixed;
     width:100%;
-    z-index: 3;
-    height:60px;
+    z-index: 99999;
 }
 
 .nav-link{
@@ -71,8 +78,8 @@ body{
     background-color:#D9A441;
 }
 
-
 /* --------------------------- HERO BANNER ---------------------------- */
+
 
 #hero{
     width:100%;
@@ -83,53 +90,42 @@ body{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    min-height:50vh;
+    min-height:40vh;
 }
 
 .hero-content h1{
-    font-size:5rem;
+    font-size:2.8rem;
     color:var(--boja-bela);
-    margin-top:-90px;
-
 }
 
 .hero-content p{
     margin-top:25px;
     font-size:1.5rem;
     color:var(--boja-bela);
-
 }
-
-
-
 
 
 /* --------------------------- ABOUT SECTION ---------------------------- */
 
+
+
 #about{
-    padding:55px 0px;
-    scroll-margin-top: 20vh;
+    padding:45px 0px;
+    scroll-margin-top: 10vh;
     background-color: var(--boja-svetloSiva);
-}
-
-.about-content{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    gap:50px;
-}
-
-.about-text{
-    display:flex;
-    flex-direction: column;
-    
+    border-top:5px solid #D9A441;
 }
 
 .about-text h2{
-    margin:25px 0px;
-    font-size: 2.2rem;
+    
+    font-size: 2.3rem;
     font-weight:550;
     color: var(--boja-zlatna);
+}
+
+.about-text p{
+    padding:8px;
+    font-size:1.2rem;
 }
 
 
@@ -141,62 +137,58 @@ body{
 }
 
 
-
 /* --------------------------- EDUCATION SECTION ---------------------------- */
 
+
 #education{
-    padding:55px 0px;
-    scroll-margin-top: 20vh;
+    padding:45px 0px;
+    scroll-margin-top: 10vh;
     background-color:var(--boja-bela);
-    
 }
+
 
 .education-content h2{
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     font-weight:550;
     color: var(--boja-zlatna);
-
 }
-
 
 .education-cards{
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    min-height:300px;
-    gap:50px;
-    padding:30px 0px;
-    
-    
+    grid-template-rows: repeat(3, 1fr);
+    gap:30px;
+    padding:25px 0px;
 }
 
 .edu-card{
-    padding:50px;
+    padding:20px;
     display:flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    border-radius: var(--radius);
-    text-align:center;
+    border-radius: 20px;
     background-color:var(--boja-svetloSiva);
+    border-bottom:2px solid #D9A441;
+    font-size:1.1rem;
+    line-height:1.8;
 }
 
 .edu-card h3{
-    font-size:1.5rem;
     text-align: center;
 }
 
 .edu-card h4{
-    line-height:0.9;
+
     font-size:0.9rem;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 
 /* --------------------------- SKILLS SECTION ---------------------------- */
 
 #skills{
-    padding: 35px 0px;
-    scroll-margin-top: 20vh;
+    padding: 25px 0px;
+    scroll-margin-top: 10vh;
     background-color:var(--boja-bela);
 }
 
@@ -221,7 +213,6 @@ body{
     font-size:1.2rem;
     font-weight:700;
     color:var(--boja-tamnoSiva);
-
 }
 
 i {
@@ -238,55 +229,46 @@ i {
     --bs-progress-bg:var(--boja-tamnoSiva);
 }
 
-
-
 /* --------------------------- PROJECTS SECTION ---------------------------- */
 
+
 #projects{
-    padding:55px 0px;
-    scroll-margin-top: 20vh;
+    padding:45px 0px;
+    scroll-margin-top: 10vh;
     background-color: var(--boja-svetloSiva);
 }
 
 .projects-content h2{
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     color:var(--boja-zlatna);
     margin-bottom:35px;
 }
 
 .project-cards{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-template-rows:1fr 1fr;
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
     grid-template-areas:
-        "novi novi stari stari"
-        "novi novi stari stari";
-    gap:40px;
+        "project"
+        "project"
+        "project"
+        "project"
+        "project"
+        "project";
+    gap:30px;
 }
 
-.current-card{
+.project-card{
     background-color:var(--boja-bela);
-    grid-area:novi;
     padding:25px;
     border-radius:var(--radius);
     display:flex;
     gap:10px;
     flex-direction: column;
-    position:relative;
-}
-
-.project-card{
-    background-color:var(--boja-bela);
-    border-radius:var(--radius);
-    display:flex;
-    gap:6px;
-    flex-direction: column;
-    padding:10px;
 
 }
 
-
-.current-card h4{
+.project-card h4{
     font-size:2rem;
     color:var(--boja-zlatna);
     margin-top:10px;
@@ -294,49 +276,34 @@ i {
  
 }
 
-.current-card h5{
+.project-card h5{
     color:var(--boja-zlatna);
     margin-bottom: 15px;
 }
 
-.project-card h4{
-    color:var(--boja-zlatna);
-    margin-top:8px;
-    margin-bottom:5px;
-    font-weight:700;
+.project-card-image-block{
+    display:flex;
+
 }
 
-.project-card h5{
-    color:var(--boja-zlatna);
-    margin-top:0px;
-    margin-bottom: 8px;
-    font-size:0.9rem;
-}
-
-
-
-.current-card img,
-.project-card img{
+.project-card-image-block img{
     width:100%;
     border-radius:var(--radius);
-    border:1px solid #EEEEEE;
-    
-}
-
-
-.current-short,
-.current-short-button{
-    display:none;
+    border:1px solid #CCCCCC;
 }
 
 .project-card-text-block{
-    position:relative;
+    display:flex;
+    flex-direction:column;
+    line-height:1.8;
+    height:70%;
+
 }
 
+
 .project-card-description{
-    font-size:0.9rem;
+    font-size:1.1rem;
     margin-bottom:40px;
-    min-height:150px;
     
 }
 
@@ -346,33 +313,33 @@ i {
 
 }
 
+.modal-content{
+    height:80vh;
+}
+
 
 /* --------------------------- CONTACT SECTION ---------------------------- */
 
 
 #contact{
-    padding:55px 0px;
-    scroll-margin-top: 20vh;
+    padding:45px 0px;
+    scroll-margin-top: 10vh;
     background-color:var(--boja-bela);
 }
 
-
-.contact-content{
-    display:flex;
-    justify-content: space-between;
-    gap:50px;
-}
-
-
-
-.contact-text h2{
-    font-size:2.2rem;
+.contact-content h2{
+    font-size:2.3rem;
     color:var(--boja-zlatna)
 }
 
 .contact-text p{
-    font-size:1.1rem;
+    font-size:1.2rem;
     margin:25px 0px;
+    padding:10px;
+}
+
+form{
+    padding:10px;
 }
 
 .contact-linkovi ul{
@@ -415,5 +382,9 @@ i {
 .footer-info{
     color:#ffffff;
     font-size:1.1rem;
-    display:block;
 }
+
+.footer-info a{
+    color:#ffffff;
+}
+
