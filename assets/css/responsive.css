@@ -1,0 +1,212 @@
+
+@media screen and (min-width:769px){
+    .project-cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+    grid-template-areas:
+        "project project"
+        "project project"
+        "project project";
+    gap:15px;
+    }
+
+    .project-btn{
+        width:33%;
+    }
+
+    .about-text p,
+    .edu-card-description,
+    .project-card-description,
+    .contact-text{
+    font-size:15px;
+    }
+
+
+    .contact-text,
+    .contact-form{
+        margin-top:15px;
+    }
+
+    .about-text h2,
+    .education-content h2,
+    .skills-content h2,
+    .projects-content h2,
+    .contact-content h2{
+        font-size:1.8rem;
+    }
+
+    .edu-card h3{
+        font-size:1.5rem;
+    }
+
+    .edu-card h4,
+    .project-card h4{
+        font-size:1.2rem;
+    }
+
+    .project-card h5{
+        font-size:1.1rem;
+    }
+
+
+}
+
+
+@media screen and (min-width:993px){
+
+body{
+    background-size:cover;
+}
+
+.modal-content{
+    height:60vh;
+}
+
+ .project-btn{
+        width:40%;
+    }
+
+.hero-content h1{
+    font-size:5rem;
+}
+
+.hero-content p{
+    font-size:2rem;
+}
+
+
+.education-cards{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:1fr;
+    gap:30px;
+    padding:25px 0px;
+}
+
+.edu-card{
+    position:relative;
+    border:none;
+}
+
+
+.edu-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:35%;
+    height:35%;
+    border-top:1px solid #D9A441;
+    border-left:1px solid #D9A441;
+    border-top-left-radius:20px;
+     opacity:0.5;
+}
+.edu-card::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:35%;
+    height:35%;
+    border-bottom:1px solid #D9A441;
+    border-right:1px solid #D9A441;
+    border-bottom-right-radius:20px;
+    opacity:0.5;
+}
+
+.project-cards{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    grid-template-rows:auto;
+    grid-template-areas:
+        "projectLatest projectLatest projectLatest projectLatest projectLatest projectLatest"
+        "project2 project2 project3 project3 project4 project4"
+        "projectWide2 projectWide2 projectWide2 projectWide3 projectWide3 projectWide3";
+    gap:15px;
+    }
+
+.project-card-text-block{
+    height:100%;
+    justify-content: center;
+
+}  
+
+.project-card:first-child{
+    grid-area: projectLatest;
+    flex-direction: row;
+    gap:25px;
+}
+
+.project-card-text-block-wide{
+    width:65%;
+}
+
+.project-card-image-block-wide{
+    width:35%;
+}
+
+.project-card-image-block-wide img{
+    width:100%;
+    height:auto;
+}
+
+.project-card:nth-child(2){
+    grid-area:project2;
+}
+.project-card:nth-child(3){
+    grid-area:project3;
+}
+.project-card:nth-child(4){
+    grid-area:project4;
+}
+.project-card:nth-child(5){
+    grid-area:projectWide2;
+}
+.project-card:last-child{
+    grid-area:projectWide3;
+}
+
+
+    .about-text p,
+    .edu-card-description,
+    .project-card-description,
+    .contact-text{
+    font-size:16px;
+    }
+
+
+    .contact-text,
+    .contact-form{
+        margin-top:20px;
+    }
+
+    .about-text h2,
+    .education-content h2,
+    .skills-content h2,
+    .projects-content h2,
+    .contact-content h2{
+        font-size:2rem;
+    }
+
+    .edu-card h3{
+        font-size:1.7rem;
+    }
+
+    .edu-card h4,
+    .project-card h4{
+        font-size:1.4rem;
+    }
+
+    .project-card h5{
+        font-size:1.3rem;
+    }
+
+
+
+    
+
+
+
+}
+
